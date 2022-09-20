@@ -1,0 +1,683 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap cdn link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+
+        <!-- bootstrap icons를 쓸 수 있게 해주는 cdn link -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/detail_style.css">
+
+        <!-- scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"
+            async="async"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+        <script src="assets/scripts/common.js"></script>
+        <script src="assets/scripts/detail_js.js"></script>
+
+        <title>온앤온협동조합</title>
+    </head>
+
+    <body>
+
+        <!-- Loading -->
+        <section class="loading">
+            <div class="loading-components">
+                <h1 class="loading-title">Loading...</h1>
+                <div class="progress-bar" aria-hidden="true">
+                    <span class="progress-bar-gauge"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- top navbar -->
+        <nav
+            class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"
+            id="top-navbar">
+            <div class="container">
+
+                <div class="row w-100 navbar-row">
+
+                    <div class="logo-part col-3">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/symbol_white.png" alt="logo" id="logo">
+                            ON&ON
+                        </a>
+                    </div>
+
+                    <div class="search-part col-8">
+                        <form class="d-flex mb-0 ms-auto" role="search" id="form-search">
+                            <input
+                                class="form-control me-1"
+                                type="search"
+                                placeholder="검색"
+                                aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="category-part col-1" style="text-align:end;">
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#category-menu"
+                            aria-controls="category-menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- <div th:replace="offcanvas :: offcanvas"></div> -->
+        <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="category-menu"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="category-menu-title">Offcanvas right</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                ...
+            </div>
+        </div>
+
+        <!-- side navbar -->
+        <!-- <div th:replace="side_nav :: side-navbar"></div> -->
+        <div class="list-group sidenav" id="side-navbar">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+              products
+            </a>
+            <a href="#about" class="list-group-item list-group-item-action">about</a>
+            <a href="#partners" class="list-group-item list-group-item-action">partners</a>
+            <a href="#contact" class="list-group-item list-group-item-action">contact</a>
+        </div>
+
+        <!-- Showcase -->
+        <section class="text-center text-sm-start d-flex" id="showcase">
+            <div class="container">
+                <div class="d-sm-flex align-items-center justify-content-center">
+                    <!-- img-fluid = img width:100%로 설정되어 responsive -->
+                    <img
+                        class="img-fluid w-50 d-none d-sm-block"
+                        src="img/showcase.svg"
+                        alt="showcase img">
+
+                    <div class="d-sm-block">
+                        <h1>
+                            <strong>기업이름</strong>
+                        </h1>
+                        <p class="my-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odit. A fuga
+                            fugiat odio iusto dolores perspiciatis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="text-center text-sm-start d-inline-block mt-5" id="about">
+            <div class="p-3 bg-dark" id="tab-nav">
+                <div class="container">
+                    <ul class="nav nav-justified" role="tablist" id="tablist">
+                        <li class="nav-item nav-tab-item" role="presentation">
+                            <a
+                                href="#products"
+                                class="nav-link active"
+                                data-bs-toggle="tab"
+                                data-bs-target="#products"
+                                aria-controls="products"
+                                role="tab"
+                                aria-selected="true"
+                                aria-current="page">주요제품예시</a>
+                        </li>
+                        <li class="nav-item nav-tab-item">
+                            <a
+                                href="#history"
+                                class="nav-link"
+                                data-bs-toggle="tab"
+                                data-bs-target="#history"
+                                aria-controls="history"
+                                role="tab"
+                                aria-selected="false"
+                                aria-current="page">연혁</a>
+                        </li>
+                        <li class="nav-item nav-tab-item">
+                            <a
+                                href="#equipment"
+                                class="nav-link"
+                                data-bs-toggle="tab"
+                                data-bs-target="#equipment"
+                                aria-controls="equipment"
+                                role="tab"
+                                aria-selected="false"
+                                aria-current="page">보유장비현황</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="tab-content" id="tab-content">
+
+                    <div
+                        class="tab-pane fade show active"
+                        id="products"
+                        role="tabpanel"
+                        aria-labelledby="products-tab">
+                        <h2 class="p-5 tab-title font-alt">제품 현황</h2>
+                        <div class="carousel carousel-dark slide" id="products-carousel">
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#products-carousel"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#products-carousel"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner pb-5">
+                                <div class="carousel-item pb-5 active">
+                                    <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item pb-5">
+                                    <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                            <div class="card-item">
+                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="tab-pane fade"
+                        id="history"
+                        role="tabpanel"
+                        aria-labelledby="history-tab">
+                        <h2 class="p-5 tab-title font-alt">주요 연혁</h2>
+                        <div class="conatiner">
+                            <div class="row history">
+                                <div class="col-6 history-left">
+                                    <div class="history-item">
+                                        <h2 class="history-year">2020</h2>
+                                        <ol class="history-contents">
+                                            <li>2020에 한 일</li>
+                                            <li>2020에 한 일</li>
+                                            <li>2020에 한 일</li>
+                                            <li>2020에 한 일</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="history-item">
+                                        <h2 class="history-year">2019</h2>
+                                        <ol class="history-contents">
+                                            <li>2019에 한 일</li>
+                                            <li>2019에 한 일</li>
+                                            <li>2019에 한 일</li>
+                                            <li>2019에 한 일</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="history-item">
+                                        <h2 class="history-year">2018</h2>
+                                        <ol class="history-contents">
+                                            <li>2018에 한 일</li>
+                                            <li>2018에 한 일</li>
+                                            <li>2018에 한 일</li>
+                                            <li>2018에 한 일</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tab-pane fade"
+                        id="equipment"
+                        role="tabpanel"
+                        aria-labelledby="products-tab">
+                        <h2 class="p-5 tab-title font-alt">장비 현황</h2>
+                        <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                <div class="card-item">
+                                    <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr class="mt-5 devider-w">
+
+        <!-- Partners -->
+        <section class="pt-5 pb-3" id="partners">
+            <div class="container">
+
+                <h2 class="tab-title font-alt">Partners</h2>
+                <div class="carousel carousel-dark slide" id="partners-carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#partners-carousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"></button>
+                        <button
+                            type="button"
+                            data-bs-target="#partners-carousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner pb-5">
+                        <div class="carousel-item pb-5 active">
+                            <div class="row text-center g-4 mt-4">
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-person-square"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center g-4 mt-4">
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-person-square"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item pb-5">
+                            <div class="row text-center g-4 mt-4">
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-person-square"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center g-4 mt-4">
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-person-square"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
+                                    <div class="card bg-secondary text-light">
+                                        <div class="card-body text-center">
+                                            <div class="h1 mb-3">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <h5>Card title</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact US -->
+        <section class="p-lg-5 bg-dark" id="contact">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-sm-6 col-lg-4 text-light p-lg-5" id="contact-caption">
+                        <h2 class="pb-lg-5 pt-sm-4 pb-sm-2" id="contact-title">Contact Us</h2>
+                        <p class="contact-desc">
+                            <strong>주소:
+                            </strong>write your address
+                        </p>
+                        <p class="contact-desc">
+                            <strong>TEL:
+                            </strong>###-####-####
+                        </p>
+                        <p class="contact-desc">
+                            <strong>FAX:
+                            </strong>###-###-####
+                        </p>
+                        <p class="contact-desc">
+                            <strong>E-MAIL:
+                            </strong>EMAIL@EMAIL.MAIL
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6" id="contact-map">
+                        <img src="img/fundamentals.svg" class="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question Accordion -->
+        <!-- <section id="questions" class="p-5"> <div class="container"> <h2
+        class="text-center mb-4">Frequently Asked Questions</h2> <div class="accordion
+        accordion-flush" id="questions"> <div class="accordion-item"> <h2
+        class="accordion-header" id="flush-headingOne"> <button class="accordion-button
+        collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#question-one" aria-expanded="false"
+        aria-controls="flush-collapseOne"> Accordion Item #1 </button> </h2> <div
+        id="question-one" class="accordion-collapse collapse"
+        aria-labelledby="flush-headingOne" data-bs-parent="#questions"> <div
+        class="accordion-body">Placeholder content for this accordion, which is intended
+        to demonstrate the <code>.accordion-flush</code> class. This is the first item's
+        accordion body.</div> </div> </div> <div class="accordion-item"> <h2
+        class="accordion-header" id="flush-headingTwo"> <button class="accordion-button
+        collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#question-two" aria-expanded="false"
+        aria-controls="flush-collapseTwo"> Accordion Item #2 </button> </h2> <div
+        id="question-two" class="accordion-collapse collapse"
+        aria-labelledby="flush-headingTwo" data-bs-parent="#questions"> <div
+        class="accordion-body">Placeholder content for this accordion, which is intended
+        to demonstrate the <code>.accordion-flush</code> class. This is the second
+        item's accordion body. Let's imagine this being filled with some actual
+        content.</div> </div> </div> <div class="accordion-item"> <h2
+        class="accordion-header" id="flush-headingThree"> <button
+        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#question-three" aria-expanded="false"
+        aria-controls="flush-collapseThree"> Accordion Item #3 </button> </h2> <div
+        id="question-three" class="accordion-collapse collapse"
+        aria-labelledby="flush-headingThree" data-bs-parent="#questions"> <div
+        class="accordion-body">Placeholder content for this accordion, which is intended
+        to demonstrate the <code>.accordion-flush</code> class. This is the third item's
+        accordion body. Nothing more exciting happening here in terms of content, but
+        just filling up the space to make it look, at least at first glance, a bit more
+        representative of how this would look in a real-world application.</div> </div>
+        </div> </div> </div> </section> -->
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center" id="footer-contents">
+                    <div class="col-md-3">
+                        <p class="copyright text-light">&copy; &nbsp;ONNON, All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-center footer-info">
+                    주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)
+                </div>
+                <div class="col-md-2 text-center footer-info">
+                    TEL: 010-9176-1429
+                </div>
+                <div class="col-md-1">
+                    <div class="footer-social-links">
+                        <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://blog.naver.com/onandoncoop" target="_blank">
+                            <i class="bi bi-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-up">
+        <a href="">
+            <i class="bi bi-chevron-double-up"></i>
+        </a>
+    </div>
+
+</body>
+</html>

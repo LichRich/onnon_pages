@@ -1,0 +1,259 @@
+/***************************************************************
+ *                                                             *
+ *                      common features                        *
+ *                                                             *
+ ***************************************************************/
+* {
+    font-family: gmarket-sans;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.bg-dark {
+    background-color: #111 !important;
+}
+
+#logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.logo-part {
+    height: 100%;
+    line-height: 2rem;
+}
+
+a:focus,
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #aaa;
+    outline: 0;
+}
+
+.nav-link {
+    color: #aaa;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+    color: #fff;
+}
+
+/***************************************************************
+ *                                                             *
+ *                  transition elements                        *
+ *                                                             *
+ ***************************************************************/
+.btn,
+a {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.card-caption,
+.card-image > img,
+.card-image:after {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+/***************************************************************
+ *                                                             *
+ *                     reset box-shadow                        *
+ *                                                             *
+ ***************************************************************/
+.btn {
+    box-shadow: none;
+}
+
+.divider-w {
+    border-top: 1px solid #eaeaea;
+    margin: 0;
+}
+
+/***************************************************************
+ *                                                             *
+ *                             Loading                         *
+ *                                                             *
+ ***************************************************************/
+ .loading {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background:#fff;
+    z-index:1000;
+}
+
+.loading-components {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.loading-title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.3333333333;
+    color: #151B26;
+    text-align: center;
+    animation-name: flicker;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: 20px;
+}
+
+.progress-bar{
+    width: 300px;
+    height: 12px;
+    background-color: #e5eaef;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-gauge{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #13CE66;
+    animation-name: loading-bar;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loading-bar {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    90% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+/***************************************************************
+ *                                                             *
+ *                            footer                           *
+ *                                                             *
+ ***************************************************************/
+ .copyright,
+ .footer-social-links {
+     margin: 10px 0;
+ }
+ 
+ .footer .footer-social-links {
+     text-align: right;
+ }
+ 
+ .footer .footer-social-links a {
+     display: inline-block;
+     padding: 0 6px;
+     color: #aaa;
+ }
+ 
+ .footer .footer-social-links a:hover {
+     color: #fff;
+ }
+ 
+ .footer-info {
+     font-size: 1rem;
+     line-height: 1rem;
+ }
+ 
+ @media(max-width: 800px) {
+     .copyright {
+         font-size: small;
+     }
+ 
+     .footer-info {
+         font-size: small;
+     }
+ 
+     #footer-contents {
+         display: flex;
+         flex-direction: column;
+     }
+     
+ }
+ 
+ /***************************************************************
+ *                                                             *
+ *                        scroll to top                        *
+ *                                                             *
+ ***************************************************************/
+ .scroll-up {
+     position: fixed;
+     display: none;
+     bottom: 20px;
+     right: 20px;
+     z-index: 999;
+ }
+ 
+ .scroll-up a {
+     display: block;
+     height: 35px;
+     width: 35px;
+     text-align: center;
+     line-height: 28px;
+     font-size: 28px;
+     color: #aaa;
+     opacity: 0.6;
+     border-radius: 100%;
+ }
+ 
+ .scroll-up a:active,
+ .scroll-up a:hover {
+     opacity: 1;
+     color: #111;
+     background-color: #fff;
+ }
+
+/***************************************************************
+ *                                                             *
+ *                           font-css                          *
+ *                                                             *
+ ***************************************************************/
+@font-face {
+    font-family: gmarket-sans;
+    src: url(../fonts/GmarketSansOTF/GmarketSansMedium.otf);
+}
+
+@font-face {
+    font-family: gmarket-sans-bold;
+    src: url(../fonts/GmarketSansOTF/GmarketSansBold.otf);
+}
+
+@font-face {
+    font-family: gmarket-sans-light;
+    src: url(../fonts/GmarketSansOTF/GmarketSansLight.otf);
+}

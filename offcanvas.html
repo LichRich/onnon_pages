@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div
+            th:fragment="offcanvas"
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="category-menu"
+            aria-labelledby="categoryMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Categories</h5>
+                <button
+                    type="button"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                    class="btn-close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="offcanvas-desc">카테고리를 선택하세요.</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action offcanvas-item">category1</a>
+                    <a href="#" class="list-group-item list-group-item-action offcanvas-item">category2</a>
+                    <a href="#" class="list-group-item list-group-item-action offcanvas-item">category3</a>
+                    <a href="#" class="list-group-item list-group-item-action offcanvas-item">category4</a>
+                    <a href="#" class="list-group-item list-group-item-action offcanvas-item">...</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

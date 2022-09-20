@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap cdn link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+
+        <!-- bootstrap icons를 쓸 수 있게 해주는 cdn link -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/index_style.css">
+
+        <!-- scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"
+            async="async"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+        <script src="assets/scripts/index_js.js"></script>
+        <script src="assets/scripts/common.js"></script>
+
+        <title>온앤온협동조합</title>
+    </head>
+
+    <body>
+
+        <!-- Loading -->
+        <section class="loading">
+            <div class="loading-components">
+                <h1 class="loading-title">Loading...</h1>
+                <div class="progress-bar" aria-hidden="true">
+                    <span class="progress-bar-gauge"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- top navbar -->
+        <nav
+            class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top"
+            id="top-navbar">
+            <div class="container">
+                <a href="" class="navbar-brand">
+                    <img src="img/symbol_white.png" alt="logo" id="logo">
+                    ON&ON
+                </a>
+
+                <div id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" id="go-search">
+                            <a href="#category-search-bar" class="nav-link" id="go-search">
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <section
+            class="text-center text-sm-start bg-dark text-light d-flex"
+            id="showcase">
+            <div class="container justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-md d-flex" id="showcase-captions">
+                        <h1 class=" showcase-caption" id="showcase-title">
+                            <strong>ON&ON</strong>
+                        </h1>
+                        <p class="my-4 showcase-caption" id="showcase-desc">
+                            온앤온은 새로운 마케팅 방식을 제안하고,<br>이를 통해 제조업체들의 성장과 성공에 기여하고자 합니다.
+                        </p>
+                    </div>
+                    <div class="col-md" id="showcase-image">
+                        <div
+                            id="showcase-carousel"
+                            class="carousel slide"
+                            data-bs-ride="carousel"
+                            data-bs-interval="5000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video autoplay="autoplay" loop="loop" muted="muted" class="d-block w-100">
+                                        <source src="assets/videos/sch_m.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="carousel-item">
+                                    <video autoplay="autoplay" loop="loop" muted="muted" class="d-block w-100">
+                                        <source src="assets/videos/3d_modeling_m.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/mimg/flee_market.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#showcase-carousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#showcase-carousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="bg-dark text-light mb-5" id="section-search-bar">
+            <div class="p-3 bg-dark">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <h3 class="col-3 text-center">Search</h3>
+                        <div
+                            class="d-flex align-items-center justify-content-center col-9 search-box"
+                            id="search-box">
+                            <i class="bi bi-search"></i>
+                            <div class="input-group">
+                                <input
+                                    id="search-bar"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="기업명 혹은 관련 태그를 입력하세요"
+                                    aria-label="category search"
+                                    aria-describedby="btn-category-search">
+                                <button id="btn-search" class="btn btn-outline-secondary" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Gallery -->
+        <section class="p-5 pt-0 pb-0">
+            <div class="container">
+                <div class="carousel carousel-dark slide" id="category-carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#category-carousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"></button>
+                        <button
+                            type="button"
+                            data-bs-target="#category-carousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item pb-5 active">
+                            <div class="row text-center">
+                                <div class="col-lg-3 col-md-6 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/gear.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">금속가공</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/plastic.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">플라스틱가공</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/carpentry.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">목재가공</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/fiber.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">섬유봉제</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/cnc.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">CNC가공</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/milling.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">밀링</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/glass_bottle.png" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">유리가공</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/chemical.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">화학/바이오</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item pb-5">
+                            <div class="row text-center">
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/3d_printing.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">3D프린팅</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/leather.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">가죽</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/paper.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">펄프/종이</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/molding.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">사출금형</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/circuit.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">회로/기판</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/components.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">조립/부품</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/cosmetics.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">화장품</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 category-card">
+                                    <a role="link" aria-disabled="true">
+                                        <div class="category-image card-image"><img src="assets/mimg/design.jpg" alt="category-image"/></div>
+                                        <div class="category-caption card-caption">
+                                            <h3 class="category-title">설계</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev category-carousel-prev"
+                        type="button"
+                        data-bs-target="#category-carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next category-carousel-next"
+                        type="button"
+                        data-bs-target="#category-carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center" id="footer-contents">
+                    <div class="col-md-3">
+                        <p class="copyright text-light">&copy; &nbsp;ONNON</a>, All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-center footer-info">
+                        주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)
+                    </div>
+                    <div class="col-md-2 text-center footer-info">
+                        TEL: 010-9176-1429
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://blog.naver.com/onandoncoop" target="_blank">
+                                <i class="bi bi-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll UP -->
+        <div class="scroll-up">
+            <a href="">
+                <i class="bi bi-chevron-double-up"></i>
+            </a>
+        </div>
+
+    </body>
+</html>
