@@ -45,14 +45,10 @@
     cursor: pointer;
 }
 
-.card-company:hover .card-company-img {
-    border: 1px solid #999;
-}
-
 .card-company-img {
-    width: 100%;
+    width: 80%;
     height: 200px;
-    border: 1px solid black;
+    margin: auto;
 }
 
 .card-text {
