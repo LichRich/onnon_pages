@@ -16,12 +16,12 @@ $(document).ready(function () {
 
     $('#btn-search').click(function (e) {
         e.preventDefault();
-        goDetail(searchKeyword);
+        goList(searchKeyword);
     });
 });
 
 var searchKeyword = $('#search-bar').val();
 
-function goDetail(link = 'detail_page.html') {
+function goList(link = 'list_view.html') {
     location.href = link;
 }

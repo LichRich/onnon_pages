@@ -41,23 +41,45 @@
     <body>
         <header th:fragment="header_common">
             <nav
-                class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top"
+                class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"
                 id="top-navbar">
                 <div class="container">
-                    <a href="index.html" class="navbar-brand">
-                        <img src="img/symbol_white.png" alt="logo" id="logo">
-                        ON&ON
-                    </a>
-                </div>
 
-                <div id="navmenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" id="go-search">
-                            <a href="#category-search-bar" class="nav-link">
-                                <i class="bi bi-search"></i>
+                    <div class="row w-100 navbar-row">
+
+                        <div class="logo-part col-3">
+                            <a href="index.html" class="navbar-brand">
+                                <img src="img/symbol_white.png" alt="logo" id="logo">
+                                ON&ON
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+
+                        <div class="search-part col-8">
+                            <form class="d-flex mb-0 ms-auto" role="search" id="form-search">
+                                <input
+                                    class="form-control me-1"
+                                    type="search"
+                                    placeholder="검색"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-secondary" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="category-part col-1" style="text-align:end;">
+                            <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#category-menu"
+                                aria-controls="category-menu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
             </nav>
         </header>

@@ -52,6 +52,7 @@
         </section>
 
         <!-- top navbar -->
+        <!-- <header th:replace="header_common :: header_common"></header> -->
         <nav
             class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"
             id="top-navbar">
@@ -102,7 +103,7 @@
             id="category-menu"
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="category-menu-title">Offcanvas right</h5>
+                <h5 class="offcanvas-title" id="category-menu-title">Categories</h5>
                 <button
                     type="button"
                     class="btn-close"
@@ -118,31 +119,104 @@
         <!-- <div th:replace="side_nav :: side-navbar"></div> -->
         <div class="list-group sidenav" id="side-navbar">
             <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-              products
+                products
             </a>
             <a href="#about" class="list-group-item list-group-item-action">about</a>
             <a href="#partners" class="list-group-item list-group-item-action">partners</a>
             <a href="#contact" class="list-group-item list-group-item-action">contact</a>
         </div>
 
-        <!-- Showcase -->
-        <section class="text-center text-sm-start d-flex" id="showcase">
+        <!-- Products -->
+        <section class="text-center text-sm-start d-flex" id="products">
             <div class="container">
-                <div class="d-sm-flex align-items-center justify-content-center">
-                    <!-- img-fluid = img width:100%로 설정되어 responsive -->
-                    <img
-                        class="img-fluid w-50 d-none d-sm-block"
-                        src="img/showcase.svg"
-                        alt="showcase img">
 
-                    <div class="d-sm-block">
-                        <h1>
-                            <strong>기업이름</strong>
-                        </h1>
-                        <p class="my-4">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odit. A fuga
-                            fugiat odio iusto dolores perspiciatis
-                        </p>
+                <h2 class="pt-5 products-title font-alt">제품 현황</h2>
+                <div class="carousel carousel-dark slide" id="products-carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#products-carousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"></button>
+                        <button
+                            type="button"
+                            data-bs-target="#products-carousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner pb-5">
+                        <div class="carousel-item active">
+                            <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon0.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon1.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon2.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon3.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon4.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item">
+                                        <img src="img/onandon5.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="carousel-item pb-5">
+                            <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon6.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon7.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/onandon5.png" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item">
+                                        <!-- <img src="img/pic06.jpg" class="card-img" alt="제품이미지"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -158,11 +232,11 @@
                                 href="#products"
                                 class="nav-link active"
                                 data-bs-toggle="tab"
-                                data-bs-target="#products"
+                                data-bs-target="#intro"
                                 aria-controls="products"
                                 role="tab"
                                 aria-selected="true"
-                                aria-current="page">주요제품예시</a>
+                                aria-current="page">기업소개</a>
                         </li>
                         <li class="nav-item nav-tab-item">
                             <a
@@ -195,99 +269,25 @@
 
                     <div
                         class="tab-pane fade show active"
-                        id="products"
+                        id="intro"
                         role="tabpanel"
                         aria-labelledby="products-tab">
-                        <h2 class="p-5 tab-title font-alt">제품 현황</h2>
-                        <div class="carousel carousel-dark slide" id="products-carousel">
-                            <div class="carousel-indicators">
-                                <button
-                                    type="button"
-                                    data-bs-target="#products-carousel"
-                                    data-bs-slide-to="0"
-                                    class="active"
-                                    aria-current="true"
-                                    aria-label="Slide 1"></button>
-                                <button
-                                    type="button"
-                                    data-bs-target="#products-carousel"
-                                    data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                            </div>
-                            <div class="carousel-inner pb-5">
-                                <div class="carousel-item pb-5 active">
-                                    <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div id="intro-contents" class="d-sm-flex align-items-center justify-content-center">
 
-                                <div class="carousel-item pb-5">
-                                    <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                            <div class="card-item">
-                                                <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <img
+                                class="img-fluid w-30 d-none d-sm-block"
+                                src="img/logo_eng_vertical.png"
+                                alt="showcase img">
+        
+                            <div class="d-sm-block intro-contents-desc p-5">
+                                <h1>
+                                    <strong>온앤온 협동조합</strong>
+                                </h1>
+                                <p class="my-4">
+                                    온앤온은 새로운 마케팅 방식을 제안하고,<br>이를 통해 제조업체들의 성장과 성공에 기여하고자 합니다.
+                                </p>
                             </div>
                         </div>
-
                     </div>
 
                     <div
@@ -300,32 +300,31 @@
                             <div class="row history">
                                 <div class="col-6 history-left">
                                     <div class="history-item">
+                                        <h2 class="history-year">2022</h2>
+                                        <ol class="history-contents">
+                                            <li>순천향대학교 입주기업 및 입주기업 협의회 홍보영상 제작</li>
+                                            <li>아산시 청년기업협의회 워크샵 기획 및 진행</li>
+                                            <li>충남테크노파크 수면산업 실증기반 지원센터 홍보자료 제작</li>
+                                            <li>아산시지속가능발전협의회 홍보 영상 제작</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="history-item">
+                                        <h2 class="history-year">2021</h2>
+                                        <ol class="history-contents">
+                                            <li>MT 쥬얼리 웹사이트 제작 및 관리</li>
+                                            <li>노원그린캠퍼스타운 사업단 플리마켓 ‘추추마켓’ 스케치 영상 제작</li>
+                                            <li>아산시 다문화 가정 청소년을 위한 진로 잡지 개발 및 배포</li>
+                                            <li>아산시 청년기업협의회 리플렛 제작</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="history-item">
                                         <h2 class="history-year">2020</h2>
                                         <ol class="history-contents">
-                                            <li>2020에 한 일</li>
-                                            <li>2020에 한 일</li>
-                                            <li>2020에 한 일</li>
-                                            <li>2020에 한 일</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="history-item">
-                                        <h2 class="history-year">2019</h2>
-                                        <ol class="history-contents">
-                                            <li>2019에 한 일</li>
-                                            <li>2019에 한 일</li>
-                                            <li>2019에 한 일</li>
-                                            <li>2019에 한 일</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="history-item">
-                                        <h2 class="history-year">2018</h2>
-                                        <ol class="history-contents">
-                                            <li>2018에 한 일</li>
-                                            <li>2018에 한 일</li>
-                                            <li>2018에 한 일</li>
-                                            <li>2018에 한 일</li>
+                                            <li>학교협동조합 설립 지원 및 지역관광 콘텐츠 제작</li>
+                                            <li>노원그린캠퍼스타운사업단 홍보영상 제작</li>
+                                            <li>서울캠퍼스타운 페스티벌2020 영상 제작</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -588,11 +587,11 @@
                         <h2 class="pb-lg-5 pt-sm-4 pb-sm-2" id="contact-title">Contact Us</h2>
                         <p class="contact-desc">
                             <strong>주소:
-                            </strong>write your address
+                            </strong>충남 아산시 신창면 순천향로 22,<br>&nbsp;5층 B518호(순천향대학교 산학협력단)
                         </p>
                         <p class="contact-desc">
                             <strong>TEL:
-                            </strong>###-####-####
+                            </strong>010-9176-1429
                         </p>
                         <p class="contact-desc">
                             <strong>FAX:
@@ -600,7 +599,7 @@
                         </p>
                         <p class="contact-desc">
                             <strong>E-MAIL:
-                            </strong>EMAIL@EMAIL.MAIL
+                            </strong>onandoncoop@gmail.com
                         </p>
                     </div>
                     <div class="col-md-3 col-sm-6" id="contact-map">
@@ -652,32 +651,32 @@
                 <div class="row align-items-center" id="footer-contents">
                     <div class="col-md-3">
                         <p class="copyright text-light">&copy; &nbsp;ONNON, All Rights Reserved</p>
-                </div>
-                <div class="col-md-6 text-center footer-info">
-                    주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)
-                </div>
-                <div class="col-md-2 text-center footer-info">
-                    TEL: 010-9176-1429
-                </div>
-                <div class="col-md-1">
-                    <div class="footer-social-links">
-                        <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://blog.naver.com/onandoncoop" target="_blank">
-                            <i class="bi bi-globe"></i>
-                        </a>
+                    </div>
+                    <div class="col-md-6 text-center footer-info">
+                        주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)
+                    </div>
+                    <div class="col-md-2 text-center footer-info">
+                        TEL: 010-9176-1429
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://blog.naver.com/onandoncoop" target="_blank">
+                                <i class="bi bi-globe"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </footer>
+
+        <div class="scroll-up">
+            <a href="">
+                <i class="bi bi-chevron-double-up"></i>
+            </a>
         </div>
-    </footer>
 
-    <div class="scroll-up">
-        <a href="">
-            <i class="bi bi-chevron-double-up"></i>
-        </a>
-    </div>
-
-</body>
+    </body>
 </html>

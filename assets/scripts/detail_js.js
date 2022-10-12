@@ -2,6 +2,11 @@ jQuery(document).ready(function () {
     /* ---------------------------------------------- /*
      * Masonry
     /* ---------------------------------------------- */
+    var $grid = $('.masonry-container').masonry({itemSelector: '.cards'});
+    $grid.imagesLoaded().progress(function() {
+        $grid.masonry();
+    });
+
     $('#tablist li').click(function (e) {
         e.preventDefault();
         $('.masonry-container').masonry({itemSelector: '.cards'});

@@ -80,13 +80,18 @@
 
 /***************************************************************
  *                                                             *
- *                          showcase                           *
+ *                          products                           *
  *                                                             *
  ***************************************************************/
-#showcase {
+#products {
     height: 100vh;
     align-items: center;
     transition: all 0.2s ease-in-out 0s;
+}
+
+.products-title {
+    font-weight: bold;
+    text-align: center;
 }
 
 /***************************************************************
@@ -118,6 +123,16 @@
     margin: 0 0 50px;
 }
 
+#intro {
+    height: 90vh;
+    margin: auto;
+}
+
+#intro-contents {
+    width: 100%;
+    height: 100%;
+}
+
 /***************************************************************
  *                                                             *
  *                        company items                        *
@@ -140,6 +155,16 @@
 
 .card {
     padding: 1rem 0;
+}
+
+.products-card {
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+}
+
+.products-card:hover {
+    border: #999 5px solid;
+    cursor: pointer;
 }
 
 /***************************************************************
@@ -204,7 +229,7 @@
  *                                                             *
  ***************************************************************/
 #partners {
-    /* height: 95vh; */
+    height: 95vh;
 }
 
 /***************************************************************

@@ -1,0 +1,65 @@
+/***************************************************************
+ *                                                             *
+ *                       common features                       *
+ *                                                             *
+ ***************************************************************/
+.section-list {
+    min-height: 100vh;
+}
+
+.list-title-content {
+    text-align: center;
+    padding: 30px 0;
+    font-family: gmarket-sans-bold;
+}
+
+/***************************************************************
+ *                                                             *
+ *                       company cards                         *
+ *                                                             *
+ ***************************************************************/
+.row-list {
+    justify-content: space-around;
+    /* margin: auto; */
+}
+
+.list-carousel-prev {
+    margin-left: -8rem;
+}
+
+.list-carousel-next {
+    margin-right: -8rem;
+}
+
+
+.card-company {
+    padding: 0;
+    width: 20%;
+    height: 350px;
+    margin: 0 1.5% 30px 1.5%;
+    transition: all 0.2s ease;
+}
+
+.card-company:hover {
+    border: 5px solid #999;
+    cursor: pointer;
+}
+
+.card-company:hover .card-company-img {
+    border: 1px solid #999;
+}
+
+.card-company-img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.card-text {
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

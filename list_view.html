@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap cdn link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+
+        <!-- bootstrap icons를 쓸 수 있게 해주는 cdn link -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/list_view.css">
+
+        <!-- scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"
+            async="async"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+        <script src="assets/scripts/common.js"></script>
+        <script src="assets/scripts/list_view.js"></script>
+
+        <title>온앤온협동조합</title>
+    </head>
+    <body>
+        <!-- <header th:replace="header_common :: header_common"></header> -->
+        <!-- top navbar -->
+        <header
+            class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"
+            id="top-navbar">
+            <div class="container">
+
+                <div class="row w-100 navbar-row">
+
+                    <div class="logo-part col-3">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/symbol_white.png" alt="logo" id="logo">
+                            ON&ON
+                        </a>
+                    </div>
+
+                    <div class="search-part col-8">
+                        <form class="d-flex mb-0 ms-auto" role="search" id="form-search">
+                            <input
+                                class="form-control me-1"
+                                type="search"
+                                placeholder="검색"
+                                aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="category-part col-1" style="text-align:end;">
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#category-menu"
+                            aria-controls="category-menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <!-- <div th:replace="offcanvas :: offcanvas"></div> -->
+        <!-- offcanvas menu -->
+        <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="category-menu"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="category-menu-title">Categories</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                ...
+            </div>
+        </div>
+
+        <section class="section-list">
+            <div class="container container-list">
+                <div class="list-title">
+                    <h2 class="list-title-content">기업 목록</h2>
+                </div>
+                <div class="carousel carousel-dark slide" id="list-carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#list-carousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide prev"></button>
+                        <button
+                            type="button"
+                            data-bs-target="#list-carousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide next"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item pb-5 active">
+                            <div class="row row-list">
+                                <div class="card card-company" id="onandon">
+                                    <img src="img/symbol_basic.png" class="card-img-top card-company-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">온앤온 협동조합</h5>
+                                        <p class="card-text">온앤온은 새로운 마케팅 방식을 제안하고, 이를 통해 제조업체들의 성장과 성공에 기여하고자 합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="card card-company">
+                                    <img src="" class="card-img-top card-company-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">기업이름</h5>
+                                        <p class="card-text">기업에 대한 간략한 설명asdfasdfasdfasdfasdfasdfasdfasdfasfafdsasdfasdfasdfasdfasdfsadfasdfasdfasdfsdafsda</p>
+                                    </div>
+                                </div>
+                                <div class="card card-company">
+                                    <img src="" class="card-img-top card-company-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">기업이름</h5>
+                                        <p class="card-text">기업에 대한 간략한 설명asdfasdfasdfasdfasdfasdfasdfasdfasfafdsasdfasdfasdfasdfasdfsadfasdfasdfasdfsdafsda</p>
+                                    </div>
+                                </div>
+                                <div class="card card-company">
+                                    <img src="" class="card-img-top card-company-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">기업이름</h5>
+                                        <p class="card-text">기업에 대한 간략한 설명asdfasdfasdfasdfasdfasdfasdfasdfasfafdsasdfasdfasdfasdfasdfsadfasdfasdfasdfsdafsda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev list-carousel-prev"
+                        type="button"
+                        data-bs-target="#list-carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next list-carousel-next"
+                        type="button"
+                        data-bs-target="#list-carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- <footer th:replace="footer :: footer"></footer> -->
+        <footer class="footer bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center" id="footer-contents">
+                    <div class="col-md-3">
+                        <p class="copyright text-light">&copy; &nbsp;ONNON, All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-center footer-info">
+                        주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)
+                    </div>
+                    <div class="col-md-2 text-center footer-info">
+                        TEL: 010-9176-1429
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://blog.naver.com/onandoncoop" target="_blank">
+                                <i class="bi bi-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll up -->
+        <div class="scroll-up">
+            <a href="">
+                <i class="bi bi-chevron-double-up"></i>
+            </a>
+        </div>
+    </body>
+</html>
