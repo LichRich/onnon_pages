@@ -1,0 +1,17 @@
+.offcanvas {
+    --bs-offcanvas-width: 300px;
+}
+
+.offcanvas-categories-items {
+    text-align: center;
+    font-size: 17px;
+    padding: 7px 0 7px 0;
+    font-weight: bold;
+    color:rgba(17, 17, 17, 0.6);
+    transition: 0.2s all ease;
+}
+
+.offcanvas-categories-items:hover {
+    cursor: pointer;
+    color: #000;
+}

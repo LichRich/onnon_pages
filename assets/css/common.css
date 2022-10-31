@@ -3,6 +3,10 @@
  *                      common features                        *
  *                                                             *
  ***************************************************************/
+:root {
+    --navbar-height: 60px;
+}
+
 * {
     font-family: gmarket-sans;
 }
@@ -15,6 +19,10 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+#top-navbar {
+    height: var(--navbar-height);
 }
 
 .bg-dark {

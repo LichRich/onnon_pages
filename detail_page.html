@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="assets/css/common.css">
         <link rel="stylesheet" href="assets/css/detail_style.css">
+        <link rel="stylesheet" href="assets/css/offcanvas_style.css">
 
         <!-- scripts -->
         <script
@@ -111,7 +112,16 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                ...
+                <ul class="list-group list-group-flush offcanvas-categories">
+                    <li class="list-group-item offcanvas-categories-items">금속가공</li>
+                    <li class="list-group-item offcanvas-categories-items">플라스틱가공</li>
+                    <li class="list-group-item offcanvas-categories-items">목재가공</li>
+                    <li class="list-group-item offcanvas-categories-items">섬유봉제</li>
+                    <li class="list-group-item offcanvas-categories-items">CNC가공</li>
+                    <li class="list-group-item offcanvas-categories-items">밀링</li>
+                    <li class="list-group-item offcanvas-categories-items">유리가공</li>
+                    <li class="list-group-item offcanvas-categories-items">화학/바이오</li>
+                </ul>
             </div>
         </div>
 
@@ -150,7 +160,7 @@
                         <div class="carousel-item active">
                             <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_0" class="card-item products-card" data-bs-toggle="modal" data-bs-target="#product_modal" data-bs-image="img/onandon0.png">
                                         <div class="product-img">
                                             <img src="img/onandon0.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -160,7 +170,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_1" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon1.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -170,7 +180,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_2" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon2.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -180,7 +190,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_3" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon3.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -190,7 +200,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_4" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon4.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -210,7 +220,7 @@
                         <div class="carousel-item pb-5">
                             <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_5" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon6.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -220,7 +230,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_6" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon7.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -230,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_7" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/onandon5.png" class="card-img" alt="제품이미지">
                                         </div>
@@ -240,7 +250,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_8" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
                                         </div>
@@ -250,7 +260,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item products-card">
+                                    <div id="on_prod_9" class="card-item products-card">
                                         <div class="product-img">
                                             <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
                                         </div>
@@ -274,9 +284,26 @@
             </div>
         </section>
 
+        <!-- Modal -->
+        <div class="modal fade" id="product_image" tabindex="-1" aria-labelledby="product-img-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="product-modal-img-body">
+                        
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+
         <!-- About -->
-        <section class="text-center text-sm-start d-inline-block mt-5" id="about">
-            <div class="p-3 bg-dark" id="tab-nav">
+        <section class="text-center text-sm-start" id="about">
+            <div class="bg-dark" id="tab-nav">
                 <div class="container">
                     <ul class="nav nav-justified" role="tablist" id="tablist">
                         <li class="nav-item nav-tab-item" role="presentation">
@@ -327,11 +354,12 @@
                         <div id="intro-contents" class="d-sm-flex align-items-center justify-content-center">
 
                             <img
-                                class="img-fluid w-30 d-none d-sm-block"
+                                id="intro-img"
+                                class="d-none d-sm-block"
                                 src="img/logo_eng_vertical.png"
-                                alt="showcase img">
+                                alt="introduction img">
         
-                            <div class="d-sm-block intro-contents-desc p-5">
+                            <div class="d-sm-block intro-contents-desc">
                                 <h1>
                                     <strong>온앤온 협동조합</strong>
                                 </h1>
@@ -431,7 +459,7 @@
         <hr class="mt-5 devider-w">
 
         <!-- Partners -->
-        <section class="pt-5 pb-3" id="partners">
+        <section id="partners">
             <div class="container">
 
                 <h2 class="tab-title font-alt">Partners</h2>
