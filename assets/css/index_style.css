@@ -4,7 +4,12 @@
  *                                                             *
  ***************************************************************/
 html, body {
-    height: 100vh;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 /* #showcase {
@@ -96,6 +101,10 @@ html, body {
  *                            category                         *
  *                                                             *
  ***************************************************************/
+.section-category {
+    flex: 1;
+}
+
 .category-card {
     padding: 0;
     padding-bottom: 20px;
