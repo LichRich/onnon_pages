@@ -12,8 +12,11 @@ body {
     flex-direction: column;
 }
 
-#showcase {
+#container {
     flex: 1;
+}
+
+#showcase {
     height: 100vh;
     align-items: center;
     transition: all 0.2s ease-in-out 0s;
@@ -60,6 +63,14 @@ body {
     overflow: hidden;
     width: 100%;
     object-fit: cover;
+}
+
+.poster-box {
+    width: 100%;
+}
+
+#poster {
+    width: 100%;
 }
 
 @media(max-width: 800px) {
