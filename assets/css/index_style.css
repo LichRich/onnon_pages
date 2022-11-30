@@ -3,7 +3,11 @@
  *                            showcase                         *
  *                                                             *
  ***************************************************************/
-#showcase {
+html, body {
+    height: 100vh;
+}
+
+/* #showcase {
     height: 100vh;
     align-items: center;
     transition: all 0.2s ease-in-out 0s;
@@ -61,7 +65,7 @@
         text-align: center;
         font-size: small;
     }
-}
+} */
 
 /***************************************************************
  *                                                             *
@@ -70,30 +74,6 @@
  ***************************************************************/
 .card {
     transition: all 0.125s ease-in-out 0s;
-}
-
-/***************************************************************
- *                                                             *
- *                     reset box-shadow                        *
- *                                                             *
- ***************************************************************/
-.nav-tab-item {
-    border-radius: 0.5rem;
-    width: 30%;
-}
-
-#about {
-    width: 100%;
-}
-
-.tab-content {
-    width: 90%;
-    margin: auto;
-}
-
-.tab-title {
-    text-align: center;
-    margin: 0 0 50px;
 }
 
 /***************************************************************
@@ -116,11 +96,6 @@
  *                            category                         *
  *                                                             *
  ***************************************************************/
-#category-carousel {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .category-card {
     padding: 0;
     padding-bottom: 20px;

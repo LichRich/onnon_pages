@@ -3,8 +3,17 @@
  *                       common features                       *
  *                                                             *
  ***************************************************************/
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .section-list {
-    min-height: 100vh;
+    flex: 1;
 }
 
 .list-title-content {
