@@ -128,13 +128,38 @@
         <!-- side navbar -->
         <!-- <div th:replace="side_nav :: side-navbar"></div> -->
         <div class="list-group sidenav" id="side-navbar">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true">about</a>
+            <a href="#products" class="list-group-item list-group-item-action">
                 products
             </a>
-            <a href="#about" class="list-group-item list-group-item-action">about</a>
-            <a href="#partners" class="list-group-item list-group-item-action">partners</a>
+            <a href="#history" class="list-group-item list-group-item-action">history</a>
+            <a href="#license" class="list-group-item list-group-item-action">license</a>
             <a href="#contact" class="list-group-item list-group-item-action">contact</a>
         </div>
+
+        <!-- About -->
+        <section class="about-section d-flex" id="about">
+            <div
+                id="intro-contents"
+                class="d-flex align-items-center justify-content-center">
+                <img
+                    id="intro-img"
+                    class="d-none d-sm-block"
+                    src="img/logo_eng_vertical.png"
+                    alt="introduction img">
+
+                <div class="d-sm-block intro-contents-desc">
+                    <h1>
+                        <strong>주식회사 동서정밀</strong>
+                    </h1>
+                    <p class="my-4">
+                        금형 제조, 산업용 접착제 부품 제조 및 판매, 플라스틱 용품 제조
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="devider-w">
 
         <!-- Products -->
         <section class="text-center text-sm-start d-flex" id="products">
@@ -160,119 +185,91 @@
                         <div class="carousel-item active">
                             <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_0" class="card-item products-card" data-bs-toggle="modal" data-bs-target="#product_modal" data-bs-image="img/onandon0.png">
+                                    <div
+                                        id="prod_0"
+                                        class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon0.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>3D 모델링을 통한 홍보영상 제작</p>
+                                            <img src="img/items_dongseo/IMG_1099.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_1" class="card-item products-card">
+                                    <div id="prod_1" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon1.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>다문화 청소년을 위한 진로잡지 제작</p>
+                                            <img src="img/items_dongseo/IMG_1118.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_2" class="card-item products-card">
+                                    <div id="prod_2" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon2.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>순천향대학교 입주기업협의회<br>계룡세계 군문화엑스포 홍보자료 제작</p>
+                                            <img src="img/items_dongseo/IMG_1134.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_3" class="card-item products-card">
+                                    <div id="prod_3" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon3.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>순천향대학교 입주기업협의회 소개 영상 제작</p>
+                                            <img src="img/items_dongseo/IMG_1149.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_4" class="card-item products-card">
+                                    <div id="prod_4" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon4.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>아산시 청년기업협의회 홍보자료 제작</p>
+                                            <img src="img/items_dongseo/IMG_1195.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item">
-                                        <img src="img/onandon5.png" class="card-img" alt="제품이미지">
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item products-card">
+                                        <img src="img/items_dongseo/IMG_1202.jpg" class="card-img" alt="제품이미지">
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
 
-                        <div class="carousel-item pb-5">
+                        <div class="carousel-item">
                             <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_5" class="card-item products-card">
+                                    <div id="prod_5" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon6.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>2021 아산시 혁신적인 청년창업가 선정</p>
+                                            <img src="img/items_dongseo/IMG_1223.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_6" class="card-item products-card">
+                                    <div id="prod_6" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon7.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>금시세에 따라 제품의 가격이 변하는 웹서비스 구축</p>
+                                            <img src="img/items_dongseo/IMG_1227.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_7" class="card-item products-card">
+                                    <div id="prod_7" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/onandon5.png" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p>충남테크노파크 수면산업 실증기반 지원센터<br>홍보자료 제작</p>
+                                            <img src="img/items_dongseo/IMG_1250.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_8" class="card-item products-card">
+                                    <div id="prod_8" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p></p>
+                                            <img src="img/items_dongseo/IMG_1253.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div id="on_prod_9" class="card-item products-card">
+                                    <div id="prod_9" class="card-item products-card">
                                         <div class="product-img">
-                                            <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
-                                        </div>
-                                        <div class="product-caption">
-                                            <p></p>
+                                            <img src="img/items_dongseo/IMG_1264.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                    <div class="card-item">
+                                    <div class="card-item products-card">
                                         <div class="product-img">
-                                            <!-- <img src="img/pic06.jpg" class="card-img" alt="제품이미지"> -->
+                                            <img src="img/items_dongseo/IMG_1268.jpg" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
@@ -280,133 +277,92 @@
                         </div>
 
                     </div>
+                    <button
+                        class="carousel-control-prev control-prev product-controls"
+                        type="button"
+                        data-bs-target="#products-carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next control-next product-controls"
+                        type="button"
+                        data-bs-target="#products-carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Modal -->
-        <div class="modal fade" id="product_image" tabindex="-1" aria-labelledby="product-img-label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="product-modal-img-body">
-                        
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
-                  </div>
-                </div>
-              </div>
-        </div>
+        <hr class="devider-w">
 
-        <!-- About -->
-        <section class="text-center text-sm-start" id="about">
-            <div class="bg-dark" id="tab-nav">
-                <div class="container">
-                    <ul class="nav nav-justified" role="tablist" id="tablist">
-                        <li class="nav-item nav-tab-item" role="presentation">
-                            <a
-                                href="#products"
-                                class="nav-link active"
-                                data-bs-toggle="tab"
-                                data-bs-target="#intro"
-                                aria-controls="products"
-                                role="tab"
-                                aria-selected="true"
-                                aria-current="page">기업소개</a>
-                        </li>
-                        <li class="nav-item nav-tab-item">
-                            <a
-                                href="#history"
-                                class="nav-link"
-                                data-bs-toggle="tab"
-                                data-bs-target="#history"
-                                aria-controls="history"
-                                role="tab"
-                                aria-selected="false"
-                                aria-current="page">연혁</a>
-                        </li>
-                        <li class="nav-item nav-tab-item">
-                            <a
-                                href="#equipment"
-                                class="nav-link"
-                                data-bs-toggle="tab"
-                                data-bs-target="#equipment"
-                                aria-controls="equipment"
-                                role="tab"
-                                aria-selected="false"
-                                aria-current="page">보유장비현황</a>
-                        </li>
-                    </ul>
-                </div>
+        <!-- History -->
+        <section class="text-center text-sm-start" id="history">
+            <h2 class="font-alt">주요 연혁</h2>
+            <div class="history-nav" id="history-nav">
+                <ul class="nav" role="tablist" id="tablist">
+                    <li class="nav-tab-item" role="presentation">
+                        <a
+                            href="#history1990"
+                            class="nav-link nav-tab-custom active"
+                            data-bs-toggle="tab"
+                            data-bs-target="#history1990"
+                            aria-controls="history1990"
+                            role="tab"
+                            aria-selected="true">1990`</a>
+                    </li>
+                    <li class="nav-tab-item" role="presentation">
+                        <a
+                            href="#history2000"
+                            class="nav-link nav-tab-custom"
+                            data-bs-toggle="tab"
+                            data-bs-target="#history2000"
+                            aria-controls="history2000"
+                            role="tab"
+                            aria-selected="false">2000`</a>
+                    </li>
+                    <li class="nav-item nav-tab-item" role="presentation">
+                        <a
+                            href="#history2010"
+                            class="nav-link nav-tab-custom"
+                            data-bs-toggle="tab"
+                            data-bs-target="#history2010"
+                            aria-controls="history2010"
+                            role="tab"
+                            aria-selected="false">2010`</a>
+                    </li>
+                </ul>
             </div>
 
             <div class="container">
                 <div class="tab-content" id="tab-content">
-
                     <div
-                        class="tab-pane fade show active"
-                        id="intro"
+                        class="tab-pane fade active show"
+                        id="history1990"
                         role="tabpanel"
-                        aria-labelledby="products-tab">
-                        <div id="intro-contents" class="d-sm-flex align-items-center justify-content-center">
-
-                            <img
-                                id="intro-img"
-                                class="d-none d-sm-block"
-                                src="img/logo_eng_vertical.png"
-                                alt="introduction img">
-        
-                            <div class="d-sm-block intro-contents-desc">
-                                <h1>
-                                    <strong>온앤온 협동조합</strong>
-                                </h1>
-                                <p class="my-4">
-                                    온앤온은 새로운 마케팅 방식을 제안하고,<br>이를 통해 제조업체들의 성장과 성공에 기여하고자 합니다.
-                                </p>
+                        aria-labelledby="history1990">
+                        <div class="tab-container">
+                            <div class="year-content-box">
+                                <div class="year">1996</div>
+                                <div class="year-content">
+                                    <p>Establishment of Dong-Seo Engineering Molding Business Department</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="tab-pane fade"
-                        id="history"
-                        role="tabpanel"
-                        aria-labelledby="history-tab">
-                        <h2 class="p-5 tab-title font-alt">주요 연혁</h2>
-                        <div class="conatiner">
-                            <div class="row history">
-                                <div class="col-6 history-left">
-                                    <div class="history-item">
-                                        <h2 class="history-year">2022</h2>
-                                        <ol class="history-contents">
-                                            <li>순천향대학교 입주기업 및 입주기업 협의회 홍보영상 제작</li>
-                                            <li>아산시 청년기업협의회 워크샵 기획 및 진행</li>
-                                            <li>충남테크노파크 수면산업 실증기반 지원센터 홍보자료 제작</li>
-                                            <li>아산시지속가능발전협의회 홍보 영상 제작</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="history-item">
-                                        <h2 class="history-year">2021</h2>
-                                        <ol class="history-contents">
-                                            <li>MT 쥬얼리 웹사이트 제작 및 관리</li>
-                                            <li>노원그린캠퍼스타운 사업단 플리마켓 ‘추추마켓’ 스케치 영상 제작</li>
-                                            <li>아산시 다문화 가정 청소년을 위한 진로 잡지 개발 및 배포</li>
-                                            <li>아산시 청년기업협의회 리플렛 제작</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="history-item">
-                                        <h2 class="history-year">2020</h2>
-                                        <ol class="history-contents">
-                                            <li>학교협동조합 설립 지원 및 지역관광 콘텐츠 제작</li>
-                                            <li>노원그린캠퍼스타운사업단 홍보영상 제작</li>
-                                            <li>서울캠퍼스타운 페스티벌2020 영상 제작</li>
-                                        </ol>
-                                    </div>
+                            <div class="year-content-box">
+                                <div class="year">1997</div>
+                                <div class="year-content">
+                                    <p>Manufacture of mold for Samsung Electronics washer and microwave component</p>
+                                </div>
+                            </div>
+                            <div class="year-content-box">
+                                <div class="year">1999</div>
+                                <div class="year-content">
+                                    <p>Ceramic Dye, completion of development, initiation of delivery, initiation of
+                                        ejection business (Mass production and delivery of washer, microwave, and
+                                        dishwasher components)</p>
                                 </div>
                             </div>
                         </div>
@@ -414,39 +370,61 @@
 
                     <div
                         class="tab-pane fade"
-                        id="equipment"
+                        id="history2000"
                         role="tabpanel"
-                        aria-labelledby="products-tab">
-                        <h2 class="p-5 tab-title font-alt">장비 현황</h2>
-                        <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                        aria-labelledby="history2000">
+                        <div class="tab-container">
+                            <div class="year-content-box">
+                                <div class="year">2003</div>
+                                <div class="year-content">
+                                    <p>Development of emission reduction filter for Hyundai motors</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                            <div class="year-content-box">
+                                <div class="year">2009</div>
+                                <div class="year-content">
+                                    <p>Production component of nail arts and initiate OEM production and delivery
+                                        for complete products</p>
+                                    <p>Production of industrial instant glue container and component, OEM production
+                                        for complete products</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                        </div>
+                    </div>
+
+                    <div
+                        class="tab-pane fade"
+                        id="history2010"
+                        role="tabpanel"
+                        aria-labelledby="history2010">
+                        <div class="tab-container">
+                            <div class="year-content-box">
+                                <div class="year">2010</div>
+                                <div class="year-content">
+                                    <p>Registered patent for blow molding device(Patent No.10-0964089)</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/fundamentals.svg" class="card-img" alt="제품이미지">
+                            <div class="year-content-box">
+                                <div class="year">2012</div>
+                                <div class="year-content">
+                                    <p>Develop, produce and initiate sales of axillary device for wrinkle free
+                                        hanger(company product).</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/pic05.jpg" class="card-img" alt="제품이미지">
+                            <div class="year-content-box">
+                                <div class="year">2014</div>
+                                <div class="year-content">
+                                    <p>Establishment of corporate body(Dong-Seo Engineering) Produce, sales of
+                                        instant glue container and components for beauty, nails, and industrial
+                                        use(company product).</p>
+                                    <p>Develop and initiate sales for device for automobile odor remover(company
+                                        product).</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6 mb-4 cards">
-                                <div class="card-item">
-                                    <img src="img/pic06.jpg" class="card-img" alt="제품이미지">
+                            <div class="year-content-box">
+                                <div class="year">2016</div>
+                                <div class="year-content">
+                                    <p>Register patent for capsule type cap(Patent No.10-1592148).</p>
                                 </div>
                             </div>
                         </div>
@@ -456,197 +434,44 @@
             </div>
         </section>
 
-        <hr class="mt-5 devider-w">
+        <hr class="devider-w">
 
-        <!-- Partners -->
-        <section id="partners">
+        <!-- License -->
+        <section id="license">
             <div class="container">
 
-                <h2 class="tab-title font-alt">Partners</h2>
-                <div class="carousel carousel-dark slide" id="partners-carousel">
+                <h2 class="license-title font-alt">특허</h2>
+                <div class="carousel carousel-dark slide" id="license-carousel">
                     <div class="carousel-indicators">
                         <button
                             type="button"
-                            data-bs-target="#partners-carousel"
+                            data-bs-target="#license-carousel"
                             data-bs-slide-to="0"
                             class="active"
                             aria-current="true"
                             aria-label="Slide 1"></button>
-                        <button
-                            type="button"
-                            data-bs-target="#partners-carousel"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner pb-5">
-                        <div class="carousel-item pb-5 active">
-                            <div class="row text-center g-4 mt-4">
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-person-square"></i>
-                                            </div>
-                                            <h5>Card title</h5>
+                        <div class="carousel-item active">
+                            <div class="row masonry-container" data-masonry='{"percentPosition": true }'>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item license-card">
+                                        <div class="license-img">
+                                            <img src="img/onandon1.png" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-laptop"></i>
-                                            </div>
-                                            <h5>Card title</h5>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item license-card">
+                                        <div class="license-img">
+                                            <img src="img/onandon1.png" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center g-4 mt-4">
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-person-square"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-laptop"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item pb-5">
-                            <div class="row text-center g-4 mt-4">
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-person-square"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-laptop"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center g-4 mt-4">
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-person-square"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-laptop"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-6">
-                                    <div class="card bg-secondary text-light">
-                                        <div class="card-body text-center">
-                                            <div class="h1 mb-3">
-                                                <i class="bi bi-people"></i>
-                                            </div>
-                                            <h5>Card title</h5>
+                                <div class="col-lg-4 col-sm-6 mb-4 cards">
+                                    <div class="card-item license-card">
+                                        <div class="license-img">
+                                            <img src="img/onandon1.png" class="card-img" alt="제품이미지">
                                         </div>
                                     </div>
                                 </div>
@@ -654,6 +479,22 @@
                         </div>
 
                     </div>
+                    <button
+                        class="carousel-control-prev control-prev product-controls"
+                        type="button"
+                        data-bs-target="#products-carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next control-next product-controls"
+                        type="button"
+                        data-bs-target="#products-carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
 
             </div>
@@ -667,19 +508,19 @@
                         <h2 class="pb-lg-5 pt-sm-4 pb-sm-2" id="contact-title">Contact Us</h2>
                         <p class="contact-desc">
                             <strong>주소:
-                            </strong>충남 아산시 신창면 순천향로 22,<br>&nbsp;5층 B518호(순천향대학교 산학협력단)
+                            </strong>충남 아산시 염치읍 현대로 244-12
                         </p>
                         <p class="contact-desc">
                             <strong>TEL:
-                            </strong>010-9176-1429
+                            </strong>041)532-1658
                         </p>
                         <p class="contact-desc">
                             <strong>FAX:
-                            </strong>###-###-####
+                            </strong>041)532-1659
                         </p>
                         <p class="contact-desc">
                             <strong>E-MAIL:
-                            </strong>onandoncoop@gmail.com
+                            </strong>ceda63@hanmail.net
                         </p>
                     </div>
                     <div class="col-md-3 col-sm-6" id="contact-map">
@@ -688,42 +529,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Question Accordion -->
-        <!-- <section id="questions" class="p-5"> <div class="container"> <h2
-        class="text-center mb-4">Frequently Asked Questions</h2> <div class="accordion
-        accordion-flush" id="questions"> <div class="accordion-item"> <h2
-        class="accordion-header" id="flush-headingOne"> <button class="accordion-button
-        collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#question-one" aria-expanded="false"
-        aria-controls="flush-collapseOne"> Accordion Item #1 </button> </h2> <div
-        id="question-one" class="accordion-collapse collapse"
-        aria-labelledby="flush-headingOne" data-bs-parent="#questions"> <div
-        class="accordion-body">Placeholder content for this accordion, which is intended
-        to demonstrate the <code>.accordion-flush</code> class. This is the first item's
-        accordion body.</div> </div> </div> <div class="accordion-item"> <h2
-        class="accordion-header" id="flush-headingTwo"> <button class="accordion-button
-        collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#question-two" aria-expanded="false"
-        aria-controls="flush-collapseTwo"> Accordion Item #2 </button> </h2> <div
-        id="question-two" class="accordion-collapse collapse"
-        aria-labelledby="flush-headingTwo" data-bs-parent="#questions"> <div
-        class="accordion-body">Placeholder content for this accordion, which is intended
-        to demonstrate the <code>.accordion-flush</code> class. This is the second
-        item's accordion body. Let's imagine this being filled with some actual
-        content.</div> </div> </div> <div class="accordion-item"> <h2
-        class="accordion-header" id="flush-headingThree"> <button
-        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#question-three" aria-expanded="false"
-        aria-controls="flush-collapseThree"> Accordion Item #3 </button> </h2> <div
-        id="question-three" class="accordion-collapse collapse"
-        aria-labelledby="flush-headingThree" data-bs-parent="#questions"> <div
-        class="accordion-body">Placeholder content for this accordion, which is intended
-        to demonstrate the <code>.accordion-flush</code> class. This is the third item's
-        accordion body. Nothing more exciting happening here in terms of content, but
-        just filling up the space to make it look, at least at first glance, a bit more
-        representative of how this would look in a real-world application.</div> </div>
-        </div> </div> </div> </section> -->
 
         <!-- Footer -->
         <footer class="footer bg-dark text-light">

@@ -1,6 +1,4 @@
 jQuery(document).ready(function () {
-    var card_captions = ['3D 모델링을 통한 홍보영상 제작', '다문화 청소년을 위한 진로잡지 제작', '순천향대학교 입주기업 협의회 계룡세계 군문화엑스포 홍보자료 제작', '순천향대학교 입주기업협의회 소개 영상 제작', '아산시 청년기업협의회 홍보자료 제작', '2021 아산시 혁신적인 청년창업가 선정', '금시세에 따라 제품의 가격이 변하는 웹서비스 구축', '충남테크노파크 수면산업 실증기반 지원센터 홍보자료 제작'];
-
     /* ---------------------------------------------- /*
      * Masonry
     /* ---------------------------------------------- */
@@ -19,6 +17,11 @@ jQuery(document).ready(function () {
         $('.masonry-container').masonry({itemSelector: '.cards'});
     });
 
+    $('.product-controls').click(function(e) {
+        e.preventDefault();
+        $('.masonry-container').masonry({itemSelector: '.cards'});
+    })
+
     /* ---------------------------------------------- /*
      * Scroll
     /* ---------------------------------------------- */
@@ -30,4 +33,12 @@ jQuery(document).ready(function () {
                 .top - $('#top-navbar').height()
         }, 0);
     });
+
+    /* ---------------------------------------------- /*
+     * Location
+    /* ---------------------------------------------- */
+    $('#prod_0').click(function (e) {
+        location.href = "detail_item.html";
+    });
+
 });
