@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
         console.log("y=" + y);
 
         const coord = {x: x - 100 + 'px', y: y - 75 + 'px'};
-        const boundary = {xMin: 100, yMin: 75, xMax: 585, yMax: 348};
+        const boundary = {xMin: 100, yMin: 75, xMax: 536, yMax: 349};
 
         switch (true) {
 
@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
               break;
           
             case (x >= boundary.xMax && y <= boundary.yMin) :
-              zoomLens.style.left = '585px';
+              zoomLens.style.left = '436px';
               zoomLens.style.top = '0';
               break;
           
@@ -64,21 +64,21 @@ jQuery(document).ready(function() {
           
             case (x <= boundary.xMin && y >= boundary.yMax) :
               zoomLens.style.left = '0';
-              zoomLens.style.top = '348px';
+              zoomLens.style.top = '274px';
               break;
           
             case (x > boundary.xMin && x < boundary.xMax && y >= boundary.yMax) :
               zoomLens.style.left = coord.x;
-              zoomLens.style.top = '348px';
+              zoomLens.style.top = '274px';
               break;
           
             case (x >= boundary.xMax && y >= boundary.yMax) :
-              zoomLens.style.left = '585px';
-              zoomLens.style.top = '348px';
+              zoomLens.style.left = '436px';
+              zoomLens.style.top = '274px';
               break;
           
             case (x >= boundary.xMax && y > boundary.yMin && y < boundary.yMax) :
-              zoomLens.style.left = '585px';
+              zoomLens.style.left = '436px';
               zoomLens.style.top = coord.y;
               break;
           
@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
 
         const {x: lensLeft, y: lensTop} = zoomLens.getBoundingClientRect();
 
-        zoomWindow.style.backgroundPosition = `${(lensLeft - left) * 100 / 585}% ${(lensTop - top) * 100 / 348}%`
+        zoomWindow.style.backgroundPosition = `${(lensLeft - left) * 100 / 436}% ${(lensTop - top) * 100 / 274}%`
 
     }
 

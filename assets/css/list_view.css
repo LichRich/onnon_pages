@@ -54,9 +54,16 @@ body {
     cursor: pointer;
 }
 
+.card-img-top {
+    height: 200px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
 .card-company-img {
     width: 80%;
-    height: 200px;
+    /* height: 200px; */
     margin: auto;
 }
 
